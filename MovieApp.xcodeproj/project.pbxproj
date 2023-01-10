@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		FA2EB48A296DB9F20046CA48 /* MainViewController + TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2EB489296DB9F20046CA48 /* MainViewController + TableView.swift */; };
 		FA2EB48C296DBBFD0046CA48 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2EB48B296DBBFD0046CA48 /* MainViewModel.swift */; };
+		FA2EB48F296DC8A10046CA48 /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2EB48E296DC8A10046CA48 /* NetworkConstants.swift */; };
+		FA2EB491296DCD400046CA48 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2EB490296DCD400046CA48 /* NetworkManager.swift */; };
+		FA2EB493296DCDA90046CA48 /* Movies.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2EB492296DCDA90046CA48 /* Movies.swift */; };
 		FA6DEA8F296D91DE006D55F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6DEA8E296D91DE006D55F1 /* AppDelegate.swift */; };
 		FA6DEA91296D91DE006D55F1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6DEA90296D91DE006D55F1 /* SceneDelegate.swift */; };
 		FA6DEA98296D91DF006D55F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA6DEA97296D91DF006D55F1 /* Assets.xcassets */; };
@@ -20,6 +23,9 @@
 /* Begin PBXFileReference section */
 		FA2EB489296DB9F20046CA48 /* MainViewController + TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewController + TableView.swift"; sourceTree = "<group>"; };
 		FA2EB48B296DBBFD0046CA48 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		FA2EB48E296DC8A10046CA48 /* NetworkConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
+		FA2EB490296DCD400046CA48 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		FA2EB492296DCDA90046CA48 /* Movies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movies.swift; sourceTree = "<group>"; };
 		FA6DEA8B296D91DE006D55F1 /* MovieApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA6DEA8E296D91DE006D55F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA6DEA90296D91DE006D55F1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -41,6 +47,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA2EB48D296DC8940046CA48 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				FA2EB48E296DC8A10046CA48 /* NetworkConstants.swift */,
+				FA2EB490296DCD400046CA48 /* NetworkManager.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		FA6DEA82296D91DE006D55F1 = {
 			isa = PBXGroup;
 			children = (
@@ -61,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				FAE29A7F296DA2C000F5C183 /* App */,
+				FA2EB48D296DC8940046CA48 /* Networking */,
 				FAE29A78296DA24A00F5C183 /* Views */,
 				FAE29A77296DA24400F5C183 /* ViewModels */,
 				FAE29A76296DA23D00F5C183 /* Models */,
@@ -72,6 +88,7 @@
 		FAE29A76296DA23D00F5C183 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				FA2EB492296DCDA90046CA48 /* Movies.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -202,9 +219,12 @@
 			files = (
 				FA2EB48C296DBBFD0046CA48 /* MainViewModel.swift in Sources */,
 				FAE29A7B296DA25B00F5C183 /* MainViewController.swift in Sources */,
+				FA2EB493296DCDA90046CA48 /* Movies.swift in Sources */,
 				FA2EB48A296DB9F20046CA48 /* MainViewController + TableView.swift in Sources */,
+				FA2EB491296DCD400046CA48 /* NetworkManager.swift in Sources */,
 				FA6DEA8F296D91DE006D55F1 /* AppDelegate.swift in Sources */,
 				FA6DEA91296D91DE006D55F1 /* SceneDelegate.swift in Sources */,
+				FA2EB48F296DC8A10046CA48 /* NetworkConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

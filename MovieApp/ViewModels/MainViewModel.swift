@@ -16,4 +16,10 @@ class MainViewModel {
     func numberOfRowsInSections() -> Int {
         10
     }
+    
+    func getData() {
+        NetworkManager.getMovies { movies in
+            print(movies.items.count)
+        }
+    }
 }
