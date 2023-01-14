@@ -31,4 +31,10 @@ class MainViewModel {
             completion()
         }
     }
+    
+    func cellViewModel(forIndexPath indexPath: IndexPath) -> CellViewModel? {
+        guard let dataSource = dataSource else {return nil}
+        let movie = dataSource.items[indexPath.row]
+        return CellViewModel(movie: movie)
+    }
 }
