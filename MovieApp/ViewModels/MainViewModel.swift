@@ -17,6 +17,7 @@ class MainViewModel {
     }
     
     func numberOfRowsInSections() -> Int {
+        //print(dataSource?.items)
         return dataSource?.items.count ?? 0
     }
     

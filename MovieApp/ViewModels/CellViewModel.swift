@@ -15,12 +15,20 @@ class CellViewModel {
         movie.title
     }
     
-    var fullTitle: String {
-        movie.fullTitle
-    }
-    
     var year: String {
         movie.year
+    }
+    
+    var rating: String {
+        "\(movie.imDBRating)/10"
+    }
+    
+    var rank: String {
+        movie.rank
+    }
+    
+    var image: String {
+        movie.image
     }
     
     

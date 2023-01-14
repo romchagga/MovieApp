@@ -15,7 +15,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
         
         tableView.backgroundColor = .clear
         
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        tableView.register(MainTableViewCell.register(), forCellReuseIdentifier: "cell")
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -27,11 +27,11 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        
-        let cellViewModel = mainViewModel.cellViewModel(forIndexPath: indexPath)
-        
-        cell.textLabel?.text = cellViewModel?.title
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? MainTableViewCell,
+              let cellViewModel = mainViewModel.cellViewModel(forIndexPath: indexPath) else {return UITableViewCell()}
+            
+        cell.setUpCell(cellViewModel: cellViewModel)
+
         return cell
     }
 }
