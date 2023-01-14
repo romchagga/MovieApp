@@ -23,7 +23,7 @@ class NetworkConstants {
     
     var urlString: String {
         get {
-            "https://imdb-api.com/en/API/MostPopularMovies/"
+            "https://imdb-api.com/en/API/MostPopularTVs/"
         }
     }
     

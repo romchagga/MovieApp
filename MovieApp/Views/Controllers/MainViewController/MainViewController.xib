@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController" customModule="MovieApp" customModuleProvider="target">
             <connections>
+                <outlet property="activityIndicator" destination="pux-FW-WAD" id="WVH-Ca-qEa"/>
                 <outlet property="tableView" destination="azQ-zW-3MH" id="ttG-qw-eY0"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -23,6 +24,10 @@
                     <rect key="frame" x="0.0" y="59" width="393" height="793"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="pux-FW-WAD">
+                    <rect key="frame" x="178" y="407.66666666666669" width="37" height="37"/>
+                    <color key="color" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </activityIndicatorView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -30,6 +35,8 @@
                 <constraint firstItem="azQ-zW-3MH" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="3ad-th-OVl"/>
                 <constraint firstAttribute="bottom" secondItem="azQ-zW-3MH" secondAttribute="bottom" id="bbC-Ez-To1"/>
                 <constraint firstItem="azQ-zW-3MH" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="h4b-hg-uSs"/>
+                <constraint firstItem="pux-FW-WAD" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="tAJ-Ex-ifP"/>
+                <constraint firstItem="pux-FW-WAD" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="ubN-w5-RTc"/>
                 <constraint firstItem="azQ-zW-3MH" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="y3N-QS-L5J"/>
             </constraints>
             <point key="canvasLocation" x="110.68702290076335" y="19.718309859154932"/>

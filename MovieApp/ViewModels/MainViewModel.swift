@@ -9,6 +9,9 @@ import Foundation
 
 class MainViewModel {
     
+    var isLoading: Observable<Bool> = Observable(false)
+    var dataSource: Movies?
+    
     func numberOfSections() -> Int {
         1
     }
@@ -18,8 +21,13 @@ class MainViewModel {
     }
     
     func getData() {
-        NetworkManager.getMovies { movies in
-            print(movies.items.count)
+        if isLoading.value ?? true {
+            return
+        }
+        isLoading.value = true
+        NetworkManager.getMovies { [weak self] movies in
+            self?.isLoading.value = false
+            self?.dataSource = movies
         }
     }
 }
