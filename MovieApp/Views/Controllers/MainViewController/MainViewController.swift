@@ -19,6 +19,7 @@ class MainViewController: UIViewController {
         
         setupView()
         bindViewModel()
+        getData()
     }
     
     func setupView() {
@@ -36,6 +37,14 @@ class MainViewController: UIViewController {
                 } else {
                     self.activityIndicator.stopAnimating()
                 }
+            }
+        }
+    }
+    
+    func getData() {
+        mainViewModel.getData {
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
             }
         }
     }

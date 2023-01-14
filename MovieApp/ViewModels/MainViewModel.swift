@@ -17,10 +17,10 @@ class MainViewModel {
     }
     
     func numberOfRowsInSections() -> Int {
-        10
+        return dataSource?.items.count ?? 0
     }
     
-    func getData() {
+    func getData(completion: @escaping () -> ()) {
         if isLoading.value ?? true {
             return
         }
@@ -28,6 +28,7 @@ class MainViewModel {
         NetworkManager.getMovies { [weak self] movies in
             self?.isLoading.value = false
             self?.dataSource = movies
+            completion()
         }
     }
 }
