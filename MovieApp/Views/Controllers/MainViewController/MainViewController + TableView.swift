@@ -31,7 +31,12 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
               let cellViewModel = mainViewModel.cellViewModel(forIndexPath: indexPath) else {return UITableViewCell()}
             
         cell.setUpCell(cellViewModel: cellViewModel)
+        cell.selectionStyle = .none
 
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        150
     }
 }

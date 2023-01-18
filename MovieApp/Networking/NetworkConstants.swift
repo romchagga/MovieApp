@@ -17,7 +17,8 @@ class NetworkConstants {
     
     var apikey: String {
         get {
-            "k_gb24i5yt/"
+            // только 100 запросов в день
+            "k_gb24i5yt"
         }
     }
     

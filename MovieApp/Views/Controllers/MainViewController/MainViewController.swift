@@ -23,9 +23,9 @@ class MainViewController: UIViewController {
     }
     
     func setupView() {
-        view.backgroundColor = .white
         self.title = "Main"
         setupTableView()
+        //view.backgroundColor = .systemBackground
     }
     
     func bindViewModel() {
