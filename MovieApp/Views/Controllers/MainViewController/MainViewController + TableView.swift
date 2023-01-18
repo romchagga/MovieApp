@@ -28,12 +28,18 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? MainTableViewCell,
-              let cellViewModel = mainViewModel.cellViewModel(forIndexPath: indexPath) else {return UITableViewCell()}
+              let cellViewModel = mainViewModel.createCellViewModel(forIndexPath: indexPath) else {return UITableViewCell()}
             
         cell.setUpCell(cellViewModel: cellViewModel)
         cell.selectionStyle = .none
 
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let detailVC = DetailViewController()
+        detailVC.detailViewModel = mainViewModel.createDetailViewModel(indexPath: indexPath)
+        navigationController?.pushViewController(detailVC, animated: true)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

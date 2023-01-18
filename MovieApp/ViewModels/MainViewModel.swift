@@ -33,9 +33,14 @@ class MainViewModel {
         }
     }
     
-    func cellViewModel(forIndexPath indexPath: IndexPath) -> CellViewModel? {
+    func createCellViewModel(forIndexPath indexPath: IndexPath) -> CellViewModel? {
         guard let dataSource = dataSource else {return nil}
         let movie = dataSource.items[indexPath.row]
         return CellViewModel(movie: movie)
+    }
+    
+    func createDetailViewModel(indexPath: IndexPath) -> DetailViewModel? {
+        guard let dataSource = dataSource else {return nil}
+        return DetailViewModel(movie: dataSource.items[indexPath.row])
     }
 }
