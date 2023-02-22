@@ -28,6 +28,7 @@ class MainTableViewCell: UITableViewCell {
     }
     
     func setUpView() {
+        backView.backgroundColor = UIColor(red: 202/255, green: 191/255, blue: 226/255, alpha: 1)
         backView.layer.borderColor = UIColor.label.cgColor
         backView.layer.borderWidth = 1
         backView.layer.cornerRadius = 10

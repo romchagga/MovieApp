@@ -25,6 +25,8 @@ class DetailViewController: UIViewController {
     }
     
     func configViews() {
+        view.backgroundColor = UIColor(red: 202/255, green: 191/255, blue: 226/255, alpha: 1)
+        
         guard let detailViewModel = detailViewModel else {return}
         
         self.title = detailViewModel.title

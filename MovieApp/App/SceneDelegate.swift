@@ -18,7 +18,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
-        window?.rootViewController = UINavigationController(rootViewController: MainViewController())
+        let navigationBarAppearance = UINavigationBarAppearance()
+        navigationBarAppearance.configureWithOpaqueBackground()
+        navigationBarAppearance.backgroundColor = UIColor(red: 25/255, green: 20/255, blue: 59/255, alpha: 1)
+        navigationBarAppearance.titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor(red: 202/255, green: 191/255, blue: 226/255, alpha: 1)]
+        let navigationController = UINavigationController(rootViewController: MainViewController())
+        navigationController.navigationBar.scrollEdgeAppearance = navigationBarAppearance
+        navigationController.navigationBar.standardAppearance = navigationBarAppearance
+        navigationController.navigationBar.compactAppearance = navigationBarAppearance
+        window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
     }
 
